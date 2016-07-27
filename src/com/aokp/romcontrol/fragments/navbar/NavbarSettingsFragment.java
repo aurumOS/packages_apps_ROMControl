@@ -50,7 +50,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-import com.android.internal.util.aokp.AOKPUtils;
+import com.android.internal.util.au.AUUtils;
 import com.aokp.romcontrol.R;
 import cyanogenmod.providers.CMSettings;
 import java.util.List;
@@ -301,7 +301,7 @@ public class NavbarSettingsFragment extends Fragment {
        private void updateNavBarSettings() {
             boolean enableNavigationBar = Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_SHOW,
-                    AOKPUtils.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
+                    AUUtils.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
             mEnableNavigationBar.setChecked(enableNavigationBar);
 
             if (mDimNavButtons != null) {
